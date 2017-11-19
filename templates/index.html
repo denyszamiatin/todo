@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>TODO List</h1>
+<p style="color:red">{{message}}</p>
+{% block content1 %}
+<p><a href="/add">Add task</a></p>
+
+<ul>
+    {% for task in tasks %}
+    <li>{{task.desc}} ({{task.deadline}})</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+</body>
+</html>
